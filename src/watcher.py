@@ -1,6 +1,7 @@
 import time 
 from pathlib import Path
 from organizer import sort_file
+from config import config
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
@@ -16,7 +17,7 @@ class MyHandler(FileSystemEventHandler):
 
 def start_watcher():
     
-    downloads = Path.home() / "Downloads"
+    downloads = config["watch_folder"]
     observer = Observer()
     observer.schedule(MyHandler(), str(downloads), recursive=False) 
     observer.start()

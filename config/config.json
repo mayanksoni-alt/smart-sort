@@ -21,7 +21,8 @@
         ".txt": "Documents",
         ".docx": "Documents",
         ".pptx": "Documents",
-        ".xlsx": "Documents"
+        ".xlsx": "Documents",
+        ".pages": "Documents"
     },
 
     "ignored_extensions": [
